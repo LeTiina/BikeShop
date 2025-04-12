@@ -1,0 +1,26 @@
+/* Social Links Styling */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--antique-white);
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.social-links a:hover {
+    color: var(--brass-gold);
+}
+
+.social-links i {
+    width: 24px;
+    margin-right: 8px;
+    color: var(--brass-gold);
+}
+
+.social-links a:hover i {
+    color: var(--warm-clay);
+}

@@ -80,8 +80,8 @@ const translations = {
         "author3": "- David Chen",
         
         // Footer
-        "footer_title": "Cycle Repair Pro",
-        "footer_subtitle": "Quality bike repairs and maintenance since 2010",
+        "footer_title": "CVK-Pyörähuolto",
+        "footer_subtitle": "Quality bike repairs and maintenance since 2019",
         "footer_hours": "Hours",
         "footer_monday": "Monday - Friday: 9am - 6pm",
         "footer_saturday": "Saturday: 10am - 4pm",        "footer_sunday": "Sunday: Closed",
@@ -210,8 +210,8 @@ const translations = {
         "author3": "- Timo Korhonen",
         
         // Footer
-        "footer_title": "Cycle Repair Pro",
-        "footer_subtitle": "Laadukkaita pyöräkorjauksia ja huoltoja vuodesta 2010",
+        "footer_title": "CVK-Pyörähuolto",
+        "footer_subtitle": "Laadukkaita pyöräkorjauksia ja huoltoja vuodesta 2019",
         "footer_hours": "Aukioloajat",
         "footer_monday": "Maanantai - Perjantai: 9:00 - 18:00",
         "footer_saturday": "Lauantai: 10:00 - 16:00",        "footer_sunday": "Sunnuntai: Suljettu",

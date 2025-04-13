@@ -114,6 +114,33 @@ body {
     margin-top: 10px;
 }
 
+footer.bg-dark {
+    background-color: var(--forest-green) !important;
+}
+
+footer .text-muted {
+    color: var(--warm-gray) !important;
+    opacity: 0.9;
+}
+
+footer .text-light {
+    color: var(--antique-white) !important;
+}
+
+footer .social-links a {
+    color: var(--antique-white) !important;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: var(--brass-gold) !important;
+}
+
+footer .border-secondary {
+    border-color: var(--warm-gray) !important;
+    opacity: 0.2;
+}
+
 /* Social links */
 .social-links a {
     transition: color 0.3s ease;

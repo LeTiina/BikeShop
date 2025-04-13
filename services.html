@@ -1,191 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - CVK-Pyörähuolto</title>    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Our Services - CVK-Pyörähuolto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/translations.js"></script>
     <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">            <div class="logo">
-                <img src="images/logo.jpg" alt="CVK-Pyörähuolto Logo">                <h1>CVK-Pyörähuolto</h1>
-            </div>            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+    <header class="py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="navbar-brand d-flex align-items-center">
+                    <img src="images/logo.jpg" alt="CVK-Pyörähuolto Logo" class="me-2" style="height: 50px;">
+                    <h1 class="mb-0">CVK-Pyörähuolto</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-i18n="nav_home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html" data-i18n="nav_services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a>
+                        </li>
+                    </ul>
+                    <button id="langSwitcher" class="btn btn-outline-primary" data-i18n="lang_switch">Suomeksi</button>
+                </div>
             </nav>
-            <button id="langSwitcher" class="lang-switcher">Suomeksi</button>
         </div>
-    </header>    <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/services-header.jpg');">
+    </header>
+
+    <section class="page-header position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/services-header.jpg') center/cover;">
         <div class="container">
-            <h2 data-i18n="services_title">Our Services</h2>
-            <p data-i18n="services_subtitle">Professional bike repair and maintenance services</p>
+            <h2 class="display-4 mb-3" data-i18n="services_title">Our Services</h2>
+            <p class="lead" data-i18n="services_subtitle">Professional bike repair and maintenance services</p>
         </div>
     </section>
 
-    <section class="huoltopaketit-section" id="huoltopaketit">
+    <section class="huoltopaketit-section py-5" id="huoltopaketit">
         <div class="container">
-            <h2 class="section-title" data-i18n="service_packages_title">HUOLTOPAKETIT</h2>
+            <h2 class="text-center mb-5" data-i18n="service_packages_title">HUOLTOPAKETIT</h2>
             
-            <div class="service-package">
-                <h3 data-i18n="first_service_title">ENSIHUOLTO</h3>
-                <p data-i18n="first_service_desc">
-                    Uusille pyörille, joilla on ajettu korkeintaan n.
-                    400 km. Sisältää rihtaukset ja säädöt.
-                </p>
-                <ul class="service-price-list">
-                    <li><span data-i18n="all_bikes">Kaikki pyörät</span> <strong>79€</strong></li>
-                    <li><span data-i18n="electric_bikes">Sähköpyörät</span> <strong>+30€</strong></li>
-                </ul>
-                <a href="contact.html#contactForm" class="service-button" data-i18n="book_service">Varaa huolto</a>
-            </div>
-            
-            <div class="service-package">
-                <h3 data-i18n="basic_service_title">PERUSHUOLTO</h3>
-                <p data-i18n="basic_service_desc">
-                    Pesu, vanteiden rihtaus, liikkuvien osien voitelu, jarrujen ja vaihteiden säätö, 
-                    kaikki mutterit ja pultit kiristetään, kuluneet tai rikkinäiset osat vaihdetaan 
-                    (vaihdetuista osista veloitetaan erikseen).
-                </p>
-                <ul class="service-price-list">
-                    <li><span data-i18n="single_speed">1-vaihteiset</span> <strong>85€</strong></li>
-                    <li><span data-i18n="three_seven_speed">3-7-vaihteiset</span> <strong>109€</strong></li>
-                    <li><span data-i18n="external_gears">Ulkovaihteiset</span> <strong>119€</strong></li>
-                    <li><span data-i18n="electric_bikes">Sähköpyörät</span> <strong>+30€</strong></li>
-                </ul>
-                <a href="contact.html#contactForm" class="service-button" data-i18n="book_service">Varaa huolto</a>
-            </div>
-            
-            <div class="service-package">
-                <h3 data-i18n="full_service_title">TÄYSHUOLTO</h3>
-                <p data-i18n="full_service_desc">
-                    Sisältää samat huoltotoimet kuin perushuollossa, sekä kaikkien laakereiden avaamisen, 
-                    rasvaamisen ja tarvittaessa uusimisen.
-                </p>
-                <ul class="service-price-list">
-                    <li><span data-i18n="all_bikes">Kaikki pyörät</span> <strong>219€</strong></li>
-                    <li><span data-i18n="electric_bikes">Sähköpyörät</span> <strong>+30€</strong></li>
-                </ul>
-                <a href="contact.html#contactForm" class="service-button" data-i18n="book_service">Varaa huolto</a>
-            </div>
-            
-            <div class="service-notes">
-                <p data-i18n="service_note1">
-                    Kaikki laatikko- ja tavarapyörät hinnoitellaan erikseen.
-                    Ota yhteyttä asiakaspalveluun!
-                </p>
-                <p data-i18n="service_note2">
-                    Huoltojen yhteydessä jarrujen ilmaus 25 € / pää, keskiötyöt 15 € (sisältyy täyshuoltoon) 
-                    ja voimansiirron uusiminen 15€ (sisältyy täyshuoltoon).
-                </p>
-                <p data-i18n="service_note3">
-                    Hoidamme rengastyöt aina odottaessa.
-                </p>
-            </div>
-        </div>
-    </section>
-      <section class="hinnasto-section" id="hinnasto">
-        <div class="container">
-            <h2 class="section-title" data-i18n="price_list_title">HINNASTO</h2>
-            
-            <div class="price-category">
-                <h3 data-i18n="brakes_title">JARRUT</h3>
-                <table class="price-table">
-                    <tr>
-                        <td data-i18n="brake_pads_installation">Jarrulänkien asennus</td>
-                        <td>28€</td>
-                        <td data-i18n="brake_pads_installation_note">pari/pää</td>
-                    </tr>
-                    <tr>
-                        <td data-i18n="disc_brake_bleeding">Levyjarrujen ilmaus</td>
-                        <td>42€</td>
-                        <td data-i18n="disc_brake_bleeding_note">muut merkit (ei Shimano)</td>
-                    </tr>
-                    <tr>
-                        <td data-i18n="disc_brake_kit_installation">Levyjarrusarjan asennus</td>
-                        <td>42€</td>
-                        <td data-i18n="disc_brake_kit_installation_note">meiltä ostetun jarrun 35€</td>
-                    </tr>
-     
-                </table>
-            </div>
-            <p></p>
-            
-            <div class="price-category">
-                <h3 data-i18n="other_work_title">MUUT TYÖT</h3>
-                <table class="price-table">
-                    <tr>
-                        <td data-i18n="bike_wash">Pyörän pesu</td>
-                        <td>27€</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td data-i18n="training_wheel_installation">Apupyörien asennus</td>
-                        <td>22€</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td data-i18n="shimano_steps_service">Shimano Steps</td>
-                        <td>59€</td>
-                        <td data-i18n="shimano_steps_service_note">Shimano Steps-sähköpyörän diagnostiikka / Päivitys</td>
-                    </tr>
-                    <tr>
-                        <td data-i18n="bosch_ebike_service">Bosch sähköpyörä</td>
-                        <td>49€</td>
-                        <td data-i18n="bosch_ebike_service_note">Bosch sähköpyörän diagnostiikka / Päivitys</td>
-                    </tr>
-                    <tr>
-                        <td data-i18n="frame_replacement">Rungon vaihto</td>
-                        <td>200€</td>
-                        <td data-i18n="case_by_case_note">hinnoitellaan aina tapauskohtaisesti</td>
-                    </tr>
-
-                </table>
-            </div>
-            
-            <div class="service-notes">                <p data-i18n="price_list_note">
-                    Huoltojen yhteydessä jarrujen ilmaus 25 € / pää, keskiötyöt 15 € (sisältyy täyshuoltoon) ja 
-                    voimansiirron uusiminen 15€ (sisältyy täyshuoltoon). Hoidamme rengastyöt aina odottaessa.
-                </p>
-            </div>
-        </div>
-   
-    <footer>
-        <div class="container">
-            <div class="footer-content">                <div class="footer-section">
-                    <h4>CVK-Pyörähuolto</h4>
-                    <p>Quality bike repairs and maintenance since 2010</p>
-                </div>                <div class="footer-section">
-                    <h4>Hours</h4>
-                    <p><strong>Porvoo:</strong></p>
-                    <p>Monday - Friday: 9:00 - 17:00</p>
-                    <p>Saturday: 10:00 - 14:00</p>
-                    <p>Sunday: Closed</p>
-                    <p><strong>Loviisa:</strong></p>
-                    <p>Monday - Friday: 9:00 - 17:00</p>
-                    <p>Saturday - Sunday: Closed</p>
-                </div>                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><strong>Porvoo:</strong></p>
-                    <p>Mestarintie 7, 06150 Porvoo</p>
-                    <p><strong>Loviisa:</strong></p>
-                    <p>Porvoonkatu 30, 07900 Loviisa</p>
-                    <p>Email: cvkpyorahuolto@gmail.com</p>
-                </div><div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/cvkpyorahuoltoporvoo/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
-                        <p></p>
-                        <a href="https://www.instagram.com/cvkpyorahuolto/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h4 mb-3" data-i18n="first_service_title">ENSIHUOLTO</h3>
+                            <p class="mb-4" data-i18n="first_service_desc">
+                                Uusille pyörille, joilla on ajettu korkeintaan n.
+                                400 km. Sisältää rihtaukset ja säädöt.
+                            </p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span data-i18n="all_bikes">Kaikki pyörät</span>
+                                    <strong>79€</strong>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span data-i18n="electric_bikes">Sähköpyörät</span>
+                                    <strong>+30€</strong>
+                                </li>
+                            </ul>
+                            <a href="contact.html#contactForm" class="btn btn-primary w-100" data-i18n="book_service">Varaa huolto</a>
+                        </div>
                     </div>
                 </div>
-            </div>            <div class="copyright">
-                <p>&copy; 2025 CVK-Pyörähuolto. All rights reserved.</p>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h4 mb-3" data-i18n="basic_service_title">PERUSHUOLTO</h3>
+                            <p class="mb-4" data-i18n="basic_service_desc">
+                                Pesu, vanteiden rihtaus, liikkuvien osien voitelu, jarrujen ja vaihteiden säätö, 
+                                kaikki mutterit ja pultit kiristetään, kuluneet tai rikkinäiset osat vaihdetaan 
+                                (vaihdetuista osista veloitetaan erikseen).
+                            </p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span data-i18n="single_speed">1-vaihteiset</span>
+                                    <strong>85€</strong>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span data-i18n="three_seven_speed">3-7-vaihteiset</span>
+                                    <strong>109€</strong>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span data-i18n="external_gears">Ulkovaihteiset</span>
+                                    <strong>119€</strong>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span data-i18n="electric_bikes">Sähköpyörät</span>
+                                    <strong>+30€</strong>
+                                </li>
+                            </ul>
+                            <a href="contact.html#contactForm" class="btn btn-primary w-100" data-i18n="book_service">Varaa huolto</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h4 mb-3" data-i18n="full_service_title">TÄYSHUOLTO</h3>
+                            <p class="mb-4" data-i18n="full_service_desc">
+                                Sisältää samat huoltotoimet kuin perushuollossa, sekä kaikkien laakereiden avaamisen, 
+                                rasvaamisen ja tarvittaessa uusimisen.
+                            </p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex justify-content-between align-items-center mb-2">
+                                    <span data-i18n="all_bikes">Kaikki pyörät</span>
+                                    <strong>219€</strong>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span data-i18n="electric_bikes">Sähköpyörät</span>
+                                    <strong>+30€</strong>
+                                </li>
+                            </ul>
+                            <a href="contact.html#contactForm" class="btn btn-primary w-100" data-i18n="book_service">Varaa huolto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-notes mt-5">
+                <div class="alert alert-info">
+                    <p class="mb-3" data-i18n="service_note1">
+                        Kaikki laatikko- ja tavarapyörät hinnoitellaan erikseen.
+                        Ota yhteyttä asiakaspalveluun!
+                    </p>
+                    <p class="mb-3" data-i18n="service_note2">
+                        Huoltojen yhteydessä jarrujen ilmaus 25 € / pää, keskiötyöt 15 € (sisältyy täyshuoltoon) 
+                        ja voimansiirron uusiminen 15€ (sisältyy täyshuoltoon).
+                    </p>
+                    <p class="mb-0" data-i18n="service_note3">
+                        Hoidamme rengastyöt aina odottaessa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hinnasto-section py-5 bg-light" id="hinnasto">
+        <div class="container">
+            <h2 class="text-center mb-5" data-i18n="price_list_title">HINNASTO</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="h4 mb-4" data-i18n="brakes_title">JARRUT</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td data-i18n="brake_pads_installation">Jarrulänkien asennus</td>
+                                            <td class="text-end"><strong>28€</strong></td>
+                                            <td class="text-muted" data-i18n="brake_pads_installation_note">pari/pää</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="disc_brake_bleeding">Levyjarrujen ilmaus</td>
+                                            <td class="text-end"><strong>42€</strong></td>
+                                            <td class="text-muted" data-i18n="disc_brake_bleeding_note">muut merkit (ei Shimano)</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="disc_brake_kit_installation">Levyjarrusarjan asennus</td>
+                                            <td class="text-end"><strong>42€</strong></td>
+                                            <td class="text-muted" data-i18n="disc_brake_kit_installation_note">meiltä ostetun jarrun 35€</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="h4 mb-4" data-i18n="other_work_title">MUUT TYÖT</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td data-i18n="bike_wash">Pyörän pesu</td>
+                                            <td class="text-end"><strong>27€</strong></td>
+                                            <td class="text-muted"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="training_wheel_installation">Apupyörien asennus</td>
+                                            <td class="text-end"><strong>22€</strong></td>
+                                            <td class="text-muted"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="shimano_steps_service">Shimano Steps</td>
+                                            <td class="text-end"><strong>59€</strong></td>
+                                            <td class="text-muted" data-i18n="shimano_steps_service_note">Shimano Steps-sähköpyörän diagnostiikka / Päivitys</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="bosch_ebike_service">Bosch sähköpyörä</td>
+                                            <td class="text-end"><strong>49€</strong></td>
+                                            <td class="text-muted" data-i18n="bosch_ebike_service_note">Bosch sähköpyörän diagnostiikka / Päivitys</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-i18n="frame_replacement">Rungon vaihto</td>
+                                            <td class="text-end"><strong>200€</strong></td>
+                                            <td class="text-muted" data-i18n="case_by_case_note">hinnoitellaan aina tapauskohtaisesti</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <div class="alert alert-info" data-i18n="price_list_note">
+                    Huoltojen yhteydessä jarrujen ilmaus 25 € / pää, keskiötyöt 15 € (sisältyy täyshuoltoon) ja 
+                    voimansiirron uusiminen 15€ (sisältyy täyshuoltoon). Hoidamme rengastyöt aina odottaessa.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3">CVK-Pyörähuolto</h4>
+                    <p class="text-muted">Quality bike repairs and maintenance since 2010</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3">Hours</h4>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong>Porvoo:</strong></p>
+                        <p class="mb-1 text-muted">Monday - Friday: 9:00 - 17:00</p>
+                        <p class="mb-1 text-muted">Saturday: 10:00 - 14:00</p>
+                        <p class="mb-1 text-muted">Sunday: Closed</p>
+                    </div>
+                    <div>
+                        <p class="mb-1"><strong>Loviisa:</strong></p>
+                        <p class="mb-1 text-muted">Monday - Friday: 9:00 - 17:00</p>
+                        <p class="mb-1 text-muted">Saturday - Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3">Contact</h4>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong>Porvoo:</strong></p>
+                        <p class="mb-1 text-muted">Mestarintie 7, 06150 Porvoo</p>
+                    </div>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong>Loviisa:</strong></p>
+                        <p class="mb-1 text-muted">Porvoonkatu 30, 07900 Loviisa</p>
+                    </div>
+                    <p class="mb-1 text-muted">Email: cvkpyorahuolto@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/cvkpyorahuoltoporvoo/" class="text-light text-decoration-none mb-2 d-block" target="_blank">
+                            <i class="fab fa-facebook me-2"></i>Facebook
+                        </a>
+                        <a href="https://www.instagram.com/cvkpyorahuolto/" class="text-light text-decoration-none d-block" target="_blank">
+                            <i class="fab fa-instagram me-2"></i>Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-4 pt-4 text-center">
+                <p class="text-muted mb-0">&copy; 2025 CVK-Pyörähuolto. All rights reserved.</p>
             </div>
         </div>
     </footer>

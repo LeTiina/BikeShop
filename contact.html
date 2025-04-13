@@ -3,61 +3,77 @@
 <head>    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - CVK-Pyörähuolto</title>    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/translations.js"></script>
     <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">            <div class="logo">
-                <img src="images/logo.jpg" alt="CVK-Pyörähuolto Logo">
-                <h1>CVK-Pyörähuolto</h1>            </div>            <nav>
-                <ul>
-                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                    <li><a href="services.html" data-i18n="nav_services">Services</a></li>
-                    <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
-                </ul>
+    <header class="py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="navbar-brand d-flex align-items-center">
+                    <img src="images/logo.jpg" alt="CVK-Pyörähuolto Logo" class="me-2" style="height: 50px;">
+                    <h1 class="mb-0">CVK-Pyörähuolto</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-i18n="nav_home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html" data-i18n="nav_services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html" data-i18n="nav_contact">Contact</a>
+                        </li>
+                    </ul>
+                    <button id="langSwitcher" class="btn btn-outline-primary" data-i18n="lang_switch">Suomeksi</button>
+                </div>
             </nav>
-            <button id="langSwitcher" class="lang-switcher" data-i18n="lang_switch">Suomeksi</button>
         </div>
     </header>
 
-    <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-header.jpg');">
+    <section class="page-header position-relative text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-header.jpg') center/cover;">
         <div class="container">
-            <h2 data-i18n="contact_title">Contact Us</h2>
-            <p data-i18n="contact_subtitle">Get in touch with our team</p>
+            <h2 class="display-4 mb-3" data-i18n="contact_title">Contact Us</h2>
+            <p class="lead" data-i18n="contact_subtitle">Get in touch with our team</p>
         </div>
-    </section>    <section class="contact-section">
+    </section>    
+
+    <section class="contact-section py-5">
         <div class="container">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3 data-i18n="contact_our_locations">Our Locations</h3>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4" data-i18n="contact_our_locations">Our Locations</h3>
                     
                     <!-- Porvoo Location -->
-                    <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--warm-gray);">
-                        <h4 style="color: var(--forest-green); margin-bottom: 15px;" data-i18n="contact_porvoo_shop">Porvoo Shop</h4>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h4 data-i18n="contact_address">Address</h4>
-                                <p>Mestarintie 7<br> 06150 Porvoo</p>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="text-primary mb-4" data-i18n="contact_porvoo_shop">Porvoo Shop</h4>
+                            <div class="d-flex mb-3">
+                                <div class="me-3 fs-4">📍</div>
+                                <div>
+                                    <h5 class="h6 mb-2" data-i18n="contact_address">Address</h5>
+                                    <p class="mb-0">Mestarintie 7<br> 06150 Porvoo</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <h4 data-i18n="contact_phone">Phone</h4>
-                                <p>(045) 123-4567</p>
+                            <div class="d-flex mb-4">
+                                <div class="me-3 fs-4">📞</div>
+                                <div>
+                                    <h5 class="h6 mb-2" data-i18n="contact_phone">Phone</h5>
+                                    <p class="mb-0">(045) 123-4567</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="map-container" style="margin-top: 15px;">
-                            <h4 data-i18n="contact_find_porvoo">Find Us in Porvoo</h4>
-                            <div class="google-map" style="margin-top: 10px; height: 250px; width: 100%; border-radius: 10px; overflow: hidden;">
+                            <h5 class="h6 mb-3" data-i18n="contact_find_porvoo">Find Us in Porvoo</h5>
+                            <div class="ratio ratio-16x9 rounded overflow-hidden">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1968.5945027015876!2d25.660076176972473!3d60.403127995283746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4691f5d2897d1a7b%3A0x30805c5d63f40ff4!2sMestarintie%207%2C%2006150%20Porvoo%2C%20Finland!5e0!3m2!1sen!2sfi!4v1712954413401!5m2!1sen!2sfi" 
-                                    width="100%" 
-                                    height="100%" 
                                     style="border:0;" 
                                     allowfullscreen="" 
                                     loading="lazy" 
@@ -68,29 +84,27 @@
                     </div>
                     
                     <!-- Loviisa Location -->
-                    <div style="margin-bottom: 30px;">
-                        <h4 style="color: var(--forest-green); margin-bottom: 15px;" data-i18n="contact_loviisa_shop">Loviisa Shop</h4>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h4 data-i18n="contact_address">Address</h4>
-                                <p>Porvoonkatu 30<br> 07900 Loviisa</p>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="text-primary mb-4" data-i18n="contact_loviisa_shop">Loviisa Shop</h4>
+                            <div class="d-flex mb-3">
+                                <div class="me-3 fs-4">📍</div>
+                                <div>
+                                    <h5 class="h6 mb-2" data-i18n="contact_address">Address</h5>
+                                    <p class="mb-0">Porvoonkatu 30<br> 07900 Loviisa</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <h4 data-i18n="contact_phone">Phone</h4>
-                                <p>(045) 987-6543</p>
+                            <div class="d-flex mb-4">
+                                <div class="me-3 fs-4">📞</div>
+                                <div>
+                                    <h5 class="h6 mb-2" data-i18n="contact_phone">Phone</h5>
+                                    <p class="mb-0">(045) 987-6543</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="map-container" style="margin-top: 15px;">
-                            <h4 data-i18n="contact_find_loviisa">Find Us in Loviisa</h4>
-                            <div class="google-map" style="margin-top: 10px; height: 250px; width: 100%; border-radius: 10px; overflow: hidden;">
+                            <h5 class="h6 mb-3" data-i18n="contact_find_loviisa">Find Us in Loviisa</h5>
+                            <div class="ratio ratio-16x9 rounded overflow-hidden">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.778524758099!2d26.22669391696107!3d60.45640493950762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920733c0340e71%3A0x94bf2142e5376cf1!2sPorvoonkatu%2030%2C%2007900%20Loviisa%2C%20Finland!5e0!3m2!1sen!2sfi!4v1716283003210!5m2!1sen!2sfi" 
-                                    width="100%" 
-                                    height="100%" 
                                     style="border:0;" 
                                     allowfullscreen="" 
                                     loading="lazy" 
@@ -101,127 +115,192 @@
                     </div>
                     
                     <!-- Shared Information -->
-                    <div>                        <div class="contact-info-item">
-                            <div class="contact-icon">📧</div>
-                            <div>
-                                <h4 data-i18n="contact_email">Email</h4>
-                                <p>cvkpyorahuolto@gmail.com</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <div class="me-3 fs-4">📧</div>
+                                <div>
+                                    <h5 class="h6 mb-2" data-i18n="contact_email">Email</h5>
+                                    <p class="mb-0">cvkpyorahuolto@gmail.com</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">🕒</div>
-                            <div>
-                                <h4 data-i18n="contact_hours">Hours</h4>
-                                <p><strong data-i18n="contact_porvoo">Porvoo:</strong><br>
-                                <span data-i18n="contact_weekdays">Monday - Friday:</span> 9:00 - 17:00<br>
-                                <span data-i18n="contact_saturday">Saturday:</span> 10:00 - 14:00<br>
-                                <span data-i18n="contact_sunday">Sunday:</span> <span data-i18n="contact_closed">Closed</span></p>
-                                <p><strong data-i18n="contact_loviisa">Loviisa:</strong><br>
-                                <span data-i18n="contact_weekdays">Monday - Friday:</span> 9:00 - 17:00<br>
-                                <span data-i18n="contact_weekend">Saturday - Sunday:</span> <span data-i18n="contact_closed">Closed</span></p>
+                            <div class="d-flex">
+                                <div class="me-3 fs-4">🕒</div>
+                                <div>
+                                    <h5 class="h6 mb-2" data-i18n="contact_hours">Hours</h5>
+                                    <p class="mb-2">
+                                        <strong data-i18n="contact_porvoo">Porvoo:</strong><br>
+                                        <span data-i18n="contact_weekdays">Monday - Friday:</span> 9:00 - 17:00<br>
+                                        <span data-i18n="contact_saturday">Saturday:</span> 10:00 - 14:00<br>
+                                        <span data-i18n="contact_sunday">Sunday:</span> <span data-i18n="contact_closed">Closed</span>
+                                    </p>
+                                    <p class="mb-0">
+                                        <strong data-i18n="contact_loviisa">Loviisa:</strong><br>
+                                        <span data-i18n="contact_weekdays">Monday - Friday:</span> 9:00 - 17:00<br>
+                                        <span data-i18n="contact_weekend">Saturday - Sunday:</span> <span data-i18n="contact_closed">Closed</span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3 data-i18n="contact_form_title">Send Us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" data-i18n="contact_name">Your Name*</label>
-                            <input type="text" id="name" name="name" required>
+                
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="h4 mb-4" data-i18n="contact_form_title">Send Us a Message</h3>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label" data-i18n="contact_name">Your Name*</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label" data-i18n="contact_email_label">Your Email*</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label" data-i18n="contact_phone_label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label" data-i18n="contact_subject">Subject*</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label" data-i18n="contact_message">Your Message*</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="service" class="form-label" data-i18n="contact_service">Service Interested In</label>
+                                    <select class="form-select" id="service" name="service">
+                                        <option value="" data-i18n="contact_select_service">-- Select a Service --</option>
+                                        <option value="basic-tune-up" data-i18n="basic_title">Basic Tune-Up</option>
+                                        <option value="full-service" data-i18n="complete_title">Full Service</option>
+                                        <option value="overhaul" data-i18n="overhaul_title">Complete Overhaul</option>
+                                        <option value="wheel-building" data-i18n="wheel_title">Custom Wheel Building</option>
+                                        <option value="repair" data-i18n="repair_title">Individual Repair</option>
+                                        <option value="other" data-i18n="contact_other">Other</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100" data-i18n="contact_send">Send Message</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="contact_email_label">Your Email*</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" data-i18n="contact_phone_label">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" data-i18n="contact_subject">Subject*</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-i18n="contact_message">Your Message*</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="service" data-i18n="contact_service">Service Interested In</label>
-                            <select id="service" name="service">
-                                <option value="" data-i18n="contact_select_service">-- Select a Service --</option>
-                                <option value="basic-tune-up" data-i18n="basic_title">Basic Tune-Up</option>
-                                <option value="full-service" data-i18n="complete_title">Full Service</option>
-                                <option value="overhaul" data-i18n="overhaul_title">Complete Overhaul</option>
-                                <option value="wheel-building" data-i18n="wheel_title">Custom Wheel Building</option>
-                                <option value="repair" data-i18n="repair_title">Individual Repair</option>
-                                <option value="other" data-i18n="contact_other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn" style="border: none;" data-i18n="contact_send">Send Message</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="faq-section" style="background-color: #f5f5f5; padding: 80px 0;">
+    <section class="faq-section py-5 bg-light">
         <div class="container">
-            <h2 class="text-center" data-i18n="contact_faq_title">Frequently Asked Questions</h2>
-            <div class="faq-container" style="margin-top: 40px;">
-                <div class="faq-item">
-                    <div class="faq-question" data-i18n="contact_faq_q1">How long does a bike service typically take?</div>
-                    <div class="faq-answer" data-i18n="contact_faq_a1">Most basic tune-ups can be completed within 24-48 hours. More extensive services like overhauls may take 3-5 business days depending on our current workload.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" data-i18n="contact_faq_q2">Do I need to make an appointment?</div>
-                    <div class="faq-answer" data-i18n="contact_faq_a2">While walk-ins are welcome for quick fixes, we recommend contacting us in advance for full services to ensure the quickest turnaround time.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" data-i18n="contact_faq_q3">Do you provide warranty on your services?</div>
-                    <div class="faq-answer" data-i18n="contact_faq_a3">Yes, all our repair work comes with a 30-day satisfaction guarantee. If any issues arise with our repair work within this period, we'll fix it at no additional cost.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" data-i18n="contact_faq_q4">What payment methods do you accept?</div>
-                    <div class="faq-answer" data-i18n="contact_faq_a4">We accept cash, all major credit cards, and mobile payment options like Apple Pay and Google Pay.</div>
+            <h2 class="text-center mb-5" data-i18n="contact_faq_title">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <span data-i18n="contact_faq_q1">How long does a bike service typically take?</span>
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="contact_faq_a1">
+                                    Most basic tune-ups can be completed within 24-48 hours. More extensive services like overhauls may take 3-5 business days depending on our current workload.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <span data-i18n="contact_faq_q2">Do I need to make an appointment?</span>
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="contact_faq_a2">
+                                    While walk-ins are welcome for quick fixes, we recommend contacting us in advance for full services to ensure the quickest turnaround time.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <span data-i18n="contact_faq_q3">Do you provide warranty on your services?</span>
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="contact_faq_a3">
+                                    Yes, all our repair work comes with a 30-day satisfaction guarantee. If any issues arise with our repair work within this period, we'll fix it at no additional cost.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <span data-i18n="contact_faq_q4">What payment methods do you accept?</span>
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="contact_faq_a4">
+                                    We accept cash, all major credit cards, and mobile payment options like Apple Pay and Google Pay.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="bg-dark text-light py-5">
         <div class="container">
-            <div class="footer-content">                <div class="footer-section">
-                    <h4 data-i18n="footer_title">CVK-Pyörähuolto</h4>
-                    <p data-i18n="footer_subtitle">Quality bike repairs and maintenance since 2010</p>
-                </div>                <div class="footer-section">
-                    <h4 data-i18n="footer_hours">Hours</h4>
-                    <p><strong data-i18n="contact_porvoo">Porvoo:</strong></p>
-                    <p data-i18n="footer_monday">Monday - Friday: 9:00 - 17:00</p>
-                    <p data-i18n="footer_saturday">Saturday: 10:00 - 14:00</p>
-                    <p data-i18n="footer_sunday">Sunday: Closed</p>
-                    <p><strong data-i18n="contact_loviisa">Loviisa:</strong></p>
-                    <p data-i18n="footer_weekdays_loviisa">Monday - Friday: 9:00 - 17:00</p>
-                    <p data-i18n="footer_weekend_loviisa">Saturday - Sunday: Closed</p>
-                </div>                <div class="footer-section">
-                    <h4 data-i18n="footer_contact">Contact</h4>
-                    <p><strong data-i18n="contact_porvoo">Porvoo:</strong></p>
-                    <p>Mestarintie 7, 06150 Porvoo</p>
-                    <p><strong data-i18n="contact_loviisa">Loviisa:</strong></p>
-                    <p>Porvoonkatu 30, 07900 Loviisa</p>
-                    <p>Email: cvkpyorahuolto@gmail.com</p>
-                </div><div class="footer-section">
-                    <h4 data-i18n="footer_social">Follow Us</h4>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_title">CVK-Pyörähuolto</h4>
+                    <p class="text-muted" data-i18n="footer_subtitle">Quality bike repairs and maintenance since 2010</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_hours">Hours</h4>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong data-i18n="contact_porvoo">Porvoo:</strong></p>
+                        <p class="mb-1 text-muted" data-i18n="footer_monday">Monday - Friday: 9:00 - 17:00</p>
+                        <p class="mb-1 text-muted" data-i18n="footer_saturday">Saturday: 10:00 - 14:00</p>
+                        <p class="mb-1 text-muted" data-i18n="footer_sunday">Sunday: Closed</p>
+                    </div>
+                    <div>
+                        <p class="mb-1"><strong data-i18n="contact_loviisa">Loviisa:</strong></p>
+                        <p class="mb-1 text-muted" data-i18n="footer_weekdays_loviisa">Monday - Friday: 9:00 - 17:00</p>
+                        <p class="mb-1 text-muted" data-i18n="footer_weekend_loviisa">Saturday - Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_contact">Contact</h4>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong data-i18n="contact_porvoo">Porvoo:</strong></p>
+                        <p class="mb-1 text-muted">Mestarintie 7, 06150 Porvoo</p>
+                    </div>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong data-i18n="contact_loviisa">Loviisa:</strong></p>
+                        <p class="mb-1 text-muted">Porvoonkatu 30, 07900 Loviisa</p>
+                    </div>
+                    <p class="mb-1 text-muted">Email: cvkpyorahuolto@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_social">Follow Us</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/cvkpyorahuoltoporvoo/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
-                        <p></p>
-                        <a href="https://www.instagram.com/cvkpyorahuolto/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/cvkpyorahuoltoporvoo/" class="text-light text-decoration-none mb-2 d-block" target="_blank">
+                            <i class="fab fa-facebook me-2"></i>Facebook
+                        </a>
+                        <a href="https://www.instagram.com/cvkpyorahuolto/" class="text-light text-decoration-none d-block" target="_blank">
+                            <i class="fab fa-instagram me-2"></i>Instagram
+                        </a>
                     </div>
                 </div>
-            </div>            <div class="copyright">
-                <p data-i18n="footer_copyright">&copy; 2025 CVK-Pyörähuolto. All rights reserved.</p>
+            </div>
+            <div class="border-top border-secondary mt-4 pt-4 text-center">
+                <p class="text-muted mb-0" data-i18n="footer_copyright">&copy; 2025 CVK-Pyörähuolto. All rights reserved.</p>
             </div>
         </div>
     </footer>

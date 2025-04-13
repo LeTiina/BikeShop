@@ -1,173 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    <meta charset="UTF-8">
+<head>    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CVK-Pyörähuolto - Quality Bike Repair Services</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>CVK-Pyörähuolto - Quality Bike Repair Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/translations.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">            <div class="logo">
-                <img src="images/logo.jpg" alt="CVK-Pyörähuolto Logo">
-                <h1>CVK-Pyörähuolto</h1>
-            </div>            <nav>
-                <ul>
-                    <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
-                    <li><a href="services.html" data-i18n="nav_services">Services</a></li>
-                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
-                </ul>
+    <header class="py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="navbar-brand d-flex align-items-center">
+                    <img src="images/logo.jpg" alt="CVK-Pyörähuolto Logo" class="me-2" style="height: 50px;">
+                    <h1 class="mb-0">CVK-Pyörähuolto</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" data-i18n="nav_home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html" data-i18n="nav_services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" data-i18n="nav_contact">Contact</a>
+                        </li>
+                    </ul>
+                    <button id="langSwitcher" class="btn btn-outline-primary" data-i18n="lang_switch">Suomeksi</button>
+                </div>
             </nav>
-            <button id="langSwitcher" class="lang-switcher" data-i18n="lang_switch">Suomeksi</button>
         </div>
-    </header>    <section class="hero">
-        <div class="container">            <div class="hero-content">
-                <h2 data-i18n="hero_title">Expert Bicycle Repair & Maintenance</h2>
-                <p data-i18n="hero_description">Professional service for all bike types and models in Porvoo. Fast, reliable and affordable repairs by certified mechanics.</p>
-                <div class="hero-buttons">
-                    <a href="services.html" class="btn" data-i18n="hero_button">Explore Our Services</a>
-                    <a href="contact.html" class="btn btn-secondary" data-i18n="hero_find_us">Find Us</a>
-                    <a href="https://booking.cvkpyorahuolto.fi" target="_blank" class="btn btn-accent" data-i18n="hero_book_time">Book Time</a>
+    </header>    <section class="hero position-relative">
+        <div class="hero-background"></div>
+        <div class="container position-relative">
+            <div class="hero-content text-light text-center">
+                <h2 class="display-4 mb-4" data-i18n="hero_title">Expert Bicycle Repair & Maintenance</h2>
+                <p class="lead mb-4" data-i18n="hero_description">Professional service for all bike types and models in Porvoo. Fast, reliable and affordable repairs by certified mechanics.</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="services.html" class="btn btn-primary" data-i18n="hero_button">Explore Our Services</a>
+                    <a href="contact.html" class="btn btn-outline-light" data-i18n="hero_find_us">Find Us</a>
+                    <a href="https://booking.cvkpyorahuolto.fi" target="_blank" class="btn btn-success" data-i18n="hero_book_time">Book Time</a>
                 </div>
-            </div><div class="hero-image">
-                <img src="images/hero.jpg" alt="Professional bike repair at CVK-Pyörähuolto">
             </div>
-        </div>    </section>    <section class="price-section">
+        </div>
+    </section>
+    <section class="price-section py-5 bg-light">
         <div class="container">
-            <h2 data-i18n="price_title">Huoltopaketit</h2>
-            <p class="section-subtitle" data-i18n="price_subtitle">Professional service packages for all bicycle types</p>
+            <h2 class="text-center mb-2" data-i18n="price_title">Huoltopaketit</h2>
+            <p class="text-center mb-5" data-i18n="price_subtitle">Professional service packages for all bicycle types</p>
             
-            <div class="price-grid">                <div class="price-card">
-                    <div class="price-header">
-                        <h3 data-i18n="basic_title">Basic Tune-Up</h3>
-                        <div class="price">79€</div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h4 mb-0" data-i18n="basic_title">Basic Tune-Up</h3>
+                            <div class="display-6 mt-2">79€</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="basic_item1">Safety inspection</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="basic_item2">Brake adjustment</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="basic_item3">Gear adjustment</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="basic_item4">Tire inflation</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="basic_item5">Chain lubrication</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="basic_item6">Basic cleaning</span></li>
+                            </ul>
+                            <p class="text-muted small mb-4" data-i18n="basic_note">Ideal for bikes that are regularly maintained</p>
+                            <a href="contact.html" class="btn btn-primary mt-auto" data-i18n="book_service">Book Service</a>
+                        </div>
                     </div>
-                    <div class="price-content">
-                        <ul>
-                            <li data-i18n="basic_item1">Safety inspection</li>
-                            <li data-i18n="basic_item2">Brake adjustment</li>
-                            <li data-i18n="basic_item3">Gear adjustment</li>
-                            <li data-i18n="basic_item4">Tire inflation</li>
-                            <li data-i18n="basic_item5">Chain lubrication</li>
-                            <li data-i18n="basic_item6">Basic cleaning</li>
-                        </ul>
-                        <p class="price-note" data-i18n="basic_note">Ideal for bikes that are regularly maintained</p>
-                        <a href="contact.html" class="btn price-btn" data-i18n="book_service">Book Service</a>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h4 mb-0" data-i18n="complete_title">Complete Service</h3>
+                            <div class="display-6 mt-2">149€</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item1">Full safety inspection</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item2">Complete drivetrain cleaning</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item3">Brake system adjustment & bleeding</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item4">Hub bearing adjustment</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item5">Wheel truing</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item6">Gear system adjustment</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item7">Frame & component cleaning</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="complete_item8">Tire inspection & inflation</span></li>
+                            </ul>
+                            <p class="text-muted small mb-4" data-i18n="complete_note">Recommended once per season for active riders</p>
+                            <a href="contact.html" class="btn btn-primary mt-auto" data-i18n="book_service">Book Service</a>
+                        </div>
                     </div>
-                </div>                <div class="price-card featured">
-                    <div class="price-header">
-                        <h3 data-i18n="complete_title">Complete Service</h3>
-                        <div class="price">149€</div>
-                    </div>
-                    <div class="price-content">
-                        <ul>
-                            <li data-i18n="complete_item1">Full safety inspection</li>
-                            <li data-i18n="complete_item2">Complete drivetrain cleaning</li>
-                            <li data-i18n="complete_item3">Brake system adjustment & bleeding</li>
-                            <li data-i18n="complete_item4">Hub bearing adjustment</li>
-                            <li data-i18n="complete_item5">Wheel truing</li>
-                            <li data-i18n="complete_item6">Gear system adjustment</li>
-                            <li data-i18n="complete_item7">Frame & component cleaning</li>
-                            <li data-i18n="complete_item8">Tire inspection & inflation</li>
-                        </ul>
-                        <p class="price-note" data-i18n="complete_note">Recommended once per season for active riders</p>
-                        <a href="contact.html" class="btn price-btn" data-i18n="book_service">Book Service</a>
-                    </div>
-                </div>                <div class="price-card">
-                    <div class="price-header">
-                        <h3 data-i18n="overhaul_title">Full Overhaul</h3>
-                        <div class="price">249€</div>
-                    </div>
-                    <div class="price-content">
-                        <ul>
-                            <li data-i18n="overhaul_item1">Complete disassembly & inspection</li>
-                            <li data-i18n="overhaul_item2">Frame & all components deep cleaning</li>
-                            <li data-i18n="overhaul_item3">Bearing systems servicing</li>
-                            <li data-i18n="overhaul_item4">Suspension service</li>
-                            <li data-i18n="overhaul_item5">Drivetrain complete overhaul</li>
-                            <li data-i18n="overhaul_item6">Brake system rebuild</li>
-                            <li data-i18n="overhaul_item7">Wheel service & truing</li>
-                            <li data-i18n="overhaul_item8">Complete reassembly & adjustment</li>
-                        </ul>
-                        <p class="price-note" data-i18n="overhaul_note">Perfect for bikes needing extensive maintenance</p>
-                        <a href="contact.html" class="btn price-btn" data-i18n="book_service">Book Service</a>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h4 mb-0" data-i18n="overhaul_title">Full Overhaul</h3>
+                            <div class="display-6 mt-2">249€</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item1">Complete disassembly & inspection</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item2">Frame & all components deep cleaning</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item3">Bearing systems servicing</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item4">Suspension service</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item5">Drivetrain complete overhaul</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item6">Brake system rebuild</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item7">Wheel service & truing</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n="overhaul_item8">Complete reassembly & adjustment</span></li>
+                            </ul>
+                            <p class="text-muted small mb-4" data-i18n="overhaul_note">Perfect for bikes needing extensive maintenance</p>
+                            <a href="contact.html" class="btn btn-primary mt-auto" data-i18n="book_service">Book Service</a>
+                        </div>
                     </div>
                 </div>
             </div>
-              <div class="price-footer">
-                <p data-i18n="price_footer">All service packages include a thorough safety check. Custom services and individual repairs also available.</p>
-                <a href="services.html" class="btn" data-i18n="view_all_services">View All Services</a>
+            
+            <div class="text-center mt-5">
+                <p class="mb-4" data-i18n="price_footer">All service packages include a thorough safety check. Custom services and individual repairs also available.</p>
+                <a href="services.html" class="btn btn-outline-primary" data-i18n="view_all_services">View All Services</a>
             </div>
         </div>
-    </section>    <section class="features">
+    </section>
+
+    <section class="features py-5">
         <div class="container">
-            <div class="feature">
-                <img src="images/repair.png" alt="Repair Icon" class="feature-icon">
-                <h3 data-i18n="repair_title">Quality Repairs</h3>
-                <p data-i18n="repair_description">Professional repairs for all bike types with attention to detail and quality parts.</p>
-            </div>
-            <div class="feature">
-                <img src="images/maintenance.png" alt="Maintenance Icon" class="feature-icon">
-                <h3 data-i18n="maintenance_title">Regular Maintenance</h3>
-                <p data-i18n="maintenance_description">Keep your bike running smoothly with our preventative maintenance services.</p>
-            </div>
-            <div class="feature">
-                <img src="images/customize.png" alt="Custom Icon" class="feature-icon">
-                <h3 data-i18n="custom_title">Custom Builds</h3>
-                <p data-i18n="custom_description">Personalize your ride with our custom building and upgrade services.</p>
-            </div>
-        </div>
-    </section>    <section class="testimonials">
-        <div class="container">
-            <h2 data-i18n="testimonials_title">What Our Customers Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p data-i18n="testimonial1">"The team fixed my mountain bike perfectly after a serious crash. Great service and very reasonable prices!"</p>
-                    <cite data-i18n="author1">- Michael Johnson</cite>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <img src="images/repair.png" alt="Repair Icon" class="mb-3" style="width: 64px;">
+                        <h3 class="h4 mb-3" data-i18n="repair_title">Quality Repairs</h3>
+                        <p class="text-muted" data-i18n="repair_description">Professional repairs for all bike types with attention to detail and quality parts.</p>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p data-i18n="testimonial2">"As a daily commuter, I need my bike in top shape. These guys keep it running perfectly year-round."</p>
-                    <cite data-i18n="author2">- Sarah Williams</cite>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <img src="images/maintenance.png" alt="Maintenance Icon" class="mb-3" style="width: 64px;">
+                        <h3 class="h4 mb-3" data-i18n="maintenance_title">Regular Maintenance</h3>
+                        <p class="text-muted" data-i18n="maintenance_description">Keep your bike running smoothly with our preventative maintenance services.</p>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p data-i18n="testimonial3">"The customizations they did to my road bike transformed it completely. Highly recommended!"</p>
-                    <cite data-i18n="author3">- David Chen</cite>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <img src="images/customize.png" alt="Custom Icon" class="mb-3" style="width: 64px;">
+                        <h3 class="h4 mb-3" data-i18n="custom_title">Custom Builds</h3>
+                        <p class="text-muted" data-i18n="custom_description">Personalize your ride with our custom building and upgrade services.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>    <footer>
+    </section>    
+    <section class="testimonials py-5 bg-light">
         <div class="container">
-            <div class="footer-content">                <div class="footer-section">
-                    <h4 data-i18n="footer_title">CVK-Pyörähuolto</h4>
-                    <p data-i18n="footer_subtitle">Quality bike repairs and maintenance since 2010</p>
-                </div>                <div class="footer-section">
-                    <h4 data-i18n="footer_hours">Hours</h4>
-                    <p><strong>Porvoo:</strong></p>
-                    <p>Monday - Friday: 9:00 - 17:00</p>
-                    <p>Saturday: 10:00 - 14:00</p>
-                    <p>Sunday: Closed</p>
-                    <p><strong>Loviisa:</strong></p>
-                    <p>Monday - Friday: 9:00 - 17:00</p>
-                    <p>Saturday - Sunday: Closed</p>
-                </div>                <div class="footer-section">
-                    <h4 data-i18n="footer_contact">Contact</h4>
-                    <p><strong>Porvoo:</strong></p>
-                    <p>Mestarintie 7, 06150 Porvoo</p>
-                    <p><strong>Loviisa:</strong></p>
-                    <p>Porvoonkatu 30, 07900 Loviisa</p>
-                    <p>Email: cvkpyorahuolto@gmail.com</p>
-                </div><div class="footer-section">
-                    <h4 data-i18n="footer_social">Follow Us</h4>
+            <h2 class="text-center mb-5" data-i18n="testimonials_title">What Our Customers Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text mb-4" data-i18n="testimonial1">"The team fixed my mountain bike perfectly after a serious crash. Great service and very reasonable prices!"</p>
+                            <footer class="text-muted" data-i18n="author1">- Michael Johnson</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text mb-4" data-i18n="testimonial2">"As a daily commuter, I need my bike in top shape. These guys keep it running perfectly year-round."</p>
+                            <footer class="text-muted" data-i18n="author2">- Sarah Williams</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text mb-4" data-i18n="testimonial3">"The customizations they did to my road bike transformed it completely. Highly recommended!"</p>
+                            <footer class="text-muted" data-i18n="author3">- David Chen</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_title">CVK-Pyörähuolto</h4>
+                    <p class="text-muted" data-i18n="footer_subtitle">Quality bike repairs and maintenance since 2010</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_hours">Hours</h4>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong>Porvoo:</strong></p>
+                        <p class="mb-1 text-muted">Monday - Friday: 9:00 - 17:00</p>
+                        <p class="mb-1 text-muted">Saturday: 10:00 - 14:00</p>
+                        <p class="mb-1 text-muted">Sunday: Closed</p>
+                    </div>
+                    <div>
+                        <p class="mb-1"><strong>Loviisa:</strong></p>
+                        <p class="mb-1 text-muted">Monday - Friday: 9:00 - 17:00</p>
+                        <p class="mb-1 text-muted">Saturday - Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_contact">Contact</h4>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong>Porvoo:</strong></p>
+                        <p class="mb-1 text-muted">Mestarintie 7, 06150 Porvoo</p>
+                    </div>
+                    <div class="mb-2">
+                        <p class="mb-1"><strong>Loviisa:</strong></p>
+                        <p class="mb-1 text-muted">Porvoonkatu 30, 07900 Loviisa</p>
+                    </div>
+                    <p class="mb-1 text-muted">Email: cvkpyorahuolto@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 mb-3" data-i18n="footer_social">Follow Us</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/cvkpyorahuoltoporvoo/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
-                        <p></p>
-                        <a href="https://www.instagram.com/cvkpyorahuolto/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/cvkpyorahuoltoporvoo/" class="text-light text-decoration-none mb-2 d-block" target="_blank">
+                            <i class="fab fa-facebook me-2"></i>Facebook
+                        </a>
+                        <a href="https://www.instagram.com/cvkpyorahuolto/" class="text-light text-decoration-none d-block" target="_blank">
+                            <i class="fab fa-instagram me-2"></i>Instagram
+                        </a>
                     </div>
                 </div>
-            </div>            <div class="copyright">
-                <p data-i18n="footer_copyright">&copy; 2025 CVK-Pyörähuolto. All rights reserved.</p>
+            </div>
+            <div class="border-top border-secondary mt-4 pt-4 text-center">
+                <p class="text-muted mb-0" data-i18n="footer_copyright">&copy; 2025 CVK-Pyörähuolto. All rights reserved.</p>
             </div>
         </div>
     </footer>
